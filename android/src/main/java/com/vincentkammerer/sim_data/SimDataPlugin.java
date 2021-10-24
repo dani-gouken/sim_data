@@ -74,7 +74,7 @@ public class SimDataPlugin implements FlutterPlugin, MethodCallHandler, Activity
         .getSystemService(Context.TELEPHONY_SUBSCRIPTION_SERVICE);
 
     List<SubscriptionInfo> subscriptionInfos = subscriptionManager
-        .getCompleteActiveSubscriptionInfoList();
+        .getActiveSubscriptionInfoList();
 
     JSONArray cards = new JSONArray();
     for (SubscriptionInfo subscriptionInfo : subscriptionInfos) {
